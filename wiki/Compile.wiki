@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Tell you how to compile this project by yourself.
 #labels Phase-Deploy
 
 = Prepare =
