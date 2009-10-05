@@ -1,6 +1,8 @@
 /*
  * RSS2blogspot - Import your rss feeds to blogspot.com ( Blogger.com )
  * 
+ * How to use this ? Please visit http://code.google.com/p/rss2blogspot/w/list !
+ * 
  * Copyright (c) 2009 Ada Hsu. ada@adahsu.net
  * 
  * This utility use of the software CC-GNU GPL 
@@ -10,8 +12,12 @@
  * 
  * You are free to use the software, but software maintainer 
  * will hold no liability for any damages, Thank You.
-
  * 
+ * Reversion: $Rev$
+ * Author: $Author$
+ * Date: $Date$
+ * Id: $Id$
+ *
  */
 package net.adahsu.rss2blogspot;
 
@@ -27,7 +33,6 @@ import java.util.Enumeration;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
@@ -68,8 +73,6 @@ public class RSS2blogspot {
 	private String blogId = null;
 	private boolean authenticated = false;
 	private boolean draft = false;
-
-	private Pattern[] filterout = null;
 
 	// RSS Namespace
 	private Namespace nsContent = Namespace.getNamespace("content",
