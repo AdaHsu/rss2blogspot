@@ -1,0 +1,48 @@
+#summary One-sentence summary of this page.
+#labels Phase-Deploy
+
+= Prepare =
+
+== Download the source ==
+
+ * This is a Maven 2 project, so we need to install a maven 2 environment. Get it at [http://maven.apache.org/ Apache Maven] project site.
+ * Download [http://code.google.com/p/gdata-java-client/ gdata-java-client] library, this time we download [http://gdata-java-client.googlecode.com/files/gdata-src.java-1.38.0.zip gdata-src.java-1.38.0.zip]. The number 1.38 is the version what we installed, if you get a newest version, save this reversion number for latter.
+ * Get the rss2blogspot source, you can download from [http://code.google.com/p/rss2blogspot/downloads/list Google Code], unpack it can get a directory called rss2blogspot.
+ * All right! these all we need.
+
+== Install the GDATA Java Client ==
+
+ * The GDATA Java Client's version is 1.38
+ * Unpack gdata-src.java-1.38.0.zip, and we will get a new directory called gdata. We can find a directory named lib.
+ * At gdata/java/lib, 4 jar files we need to install by self, there are *gdata-core-1.0.jar*, *gdata-base-1.0.jar*, *gdata-blogger-2.0.jar*, and *gdata-media-1.0.jar* . Use the following code to install into maven 2 local repository.
+{{{
+  # Remember change your gdata-java-client version correctly.
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-core  \
+                                    -Dversion=1.0-1.38 -Dfile=gdata-core-1.0.jar \
+                                    -Dpackaging=jar -DgeneratePom=true
+
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-base  \
+                                    -Dversion=1.0-1.38 -Dfile=gdata-base-1.0.jar \
+                                    -Dpackaging=jar -DgeneratePom=true
+
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-blogger  \
+                                    -Dversion=2.0-1.38 -Dfile=gdata-blogger-2.0.jar \
+                                    -Dpackaging=jar -DgeneratePom=true
+
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-media  \
+                                    -Dversion=1.0-1.38 -Dfile=gdata-media-1.0.jar \
+                                    -Dpackaging=jar -DgeneratePom=true
+}}}
+ * Or, if you use Linux with bash, run src/main/resources/installGDATA.sh at gdata/java/lib to install all jars.
+
+= Compile =
+
+Compile is easy, just run the following code at rss2blogspot/ , maven will compile and package it as a single, runnable jar file.
+
+{{{
+  $ mvn clean package
+}}}
+
+= Execute =
+
+Check wiki page to execute it !
