@@ -14,26 +14,29 @@
 
  * The GDATA Java Client's version is 1.38
  * Unpack gdata-src.java-1.38.0.zip, and we will get a new directory called gdata. We can find a directory named lib.
- * At gdata/java/lib, 4 jar files we need to install by self, there are *gdata-core-1.0.jar*, *gdata-base-1.0.jar*, *gdata-blogger-2.0.jar*, and *gdata-media-1.0.jar* . Use the following code to install into maven 2 local repository.
+ * At gdata/java/lib, 4 jar files we need to install by self, there are *gdata-core-1.0.jar*, *gdata-base-1.0.jar*, *gdata-blogger-2.0.jar*, and *gdata-media-1.0.jar* . [http://www.flickr.com/photos/adahsu/3993329206/ http://farm3.static.flickr.com/2498/3993329206_32442c86e1_o.png]
+ * Use the following code to install these jars into maven 2 local repository.
 {{{
   # Remember change your gdata-java-client version correctly.
-  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-core  \
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifactId=gdata-core  \
                                     -Dversion=1.0-1.38 -Dfile=gdata-core-1.0.jar \
                                     -Dpackaging=jar -DgeneratePom=true
 
-  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-base  \
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifactId=gdata-base  \
                                     -Dversion=1.0-1.38 -Dfile=gdata-base-1.0.jar \
                                     -Dpackaging=jar -DgeneratePom=true
 
-  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-blogger  \
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifactId=gdata-blogger  \
                                     -Dversion=2.0-1.38 -Dfile=gdata-blogger-2.0.jar \
                                     -Dpackaging=jar -DgeneratePom=true
 
-  $ mvn install:install-file -DgroupId=com.google.gdata -DartifictId=gdata-media  \
+  $ mvn install:install-file -DgroupId=com.google.gdata -DartifactId=gdata-media  \
                                     -Dversion=1.0-1.38 -Dfile=gdata-media-1.0.jar \
                                     -Dpackaging=jar -DgeneratePom=true
 }}}
- * Or, if you use Linux with bash, run src/main/resources/installGDATA.sh at gdata/java/lib to install all jars.
+ * Or, use the bundled resource file to install them:
+   # If you use Windows platform, copy rss2blogspot/src/main/resources/installGDATA.cmd to gdata/java/lib and run it to install these 4 jars. *BUT be careful* , must be sure these 4 jars are installed.
+   # If you use Linux platform with bash, copy rss2blogspot/src/main/resources/installGDATA.sh to gdata/java/lib and turn it to install all jars.
 
 = Compile =
 
