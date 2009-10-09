@@ -14,7 +14,8 @@
 
  * The GDATA Java Client's version is 1.38
  * Unpack gdata-src.java-1.38.0.zip, and we will get a new directory called gdata. We can find a directory named lib.
- * At gdata/java/lib, 4 jar files we need to install by self, there are *gdata-core-1.0.jar*, *gdata-base-1.0.jar*, *gdata-blogger-2.0.jar*, and *gdata-media-1.0.jar* . [http://www.flickr.com/photos/adahsu/3993329206/ http://farm3.static.flickr.com/2498/3993329206_32442c86e1_o.png]
+ * At gdata/java/lib, 4 jar files we need to install by self, there are *gdata-core-1.0.jar*, *gdata-base-1.0.jar*, *gdata-blogger-2.0.jar*, and *gdata-media-1.0.jar* .
+ [http://www.flickr.com/photos/adahsu/3993329206/ http://farm3.static.flickr.com/2498/3993329206_32442c86e1_o.png]
  * Use the following code to install these jars into maven 2 local repository.
 {{{
   # Remember change your gdata-java-client version correctly.
