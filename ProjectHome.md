@@ -1,0 +1,1 @@
+Using Google Data API to import all the RSS feeds to blogspot.com ( Blogger.com )
